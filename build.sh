@@ -38,6 +38,7 @@ ls -l python/ | grep three_body
 #———————————————
 # 5. 运行可视化脚本
 #———————————————
-echo "启动三体模拟..."
-uv run python/visualize.py
+echo "执行 uv run python/visualize.py 启动三体模拟..."
+echo "执行 uv run python/dynamic.py 启动动态模拟..."
+# uv run python/visualize.py
 
