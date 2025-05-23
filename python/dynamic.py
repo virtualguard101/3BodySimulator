@@ -6,7 +6,7 @@ from three_body import Body, step
 
 # 常量
 SCALE_INIT = 1e-9     # 初始缩放比例: 物理坐标 (m) -> 屏幕像素
-TIMESTEP = 18000       # 每步时间（秒）
+TIMESTEP = 15000       # 每步时间（秒）
 WINDOW_SIZE = 1500
 FPS = 60              # 帧率上限
 
