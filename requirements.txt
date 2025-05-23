@@ -2,4 +2,5 @@
 pybind11>=2.11.1
 numpy>=1.26.0
 matplotlib>=3.8.0
+PyQt5
 ninja>=1.11.1  # 用于加速构建
