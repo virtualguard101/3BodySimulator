@@ -60,7 +60,7 @@ bodies = default_bodies if use_default == 'y' else get_user_defined_bodies()
 # 屏幕设置
 width, height = 1000, 1000
 screen = pygame.display.set_mode((width, height))
-pygame.display.set_caption("Three-Body Dynamic Simulation")
+pygame.display.set_caption("Three-Body Dynamic Simulation (Python Only Step)")
 
 scale = 5e8  # 像素/米
 offset = np.array([width // 2, height // 2])
