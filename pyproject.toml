@@ -4,4 +4,10 @@ version = "0.1.0"
 description = "The visualization simulation of three-body motion implemented using C++ & Python."
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "matplotlib>=3.8.0",
+    "ninja>=1.11.1",
+    "numpy>=1.26.0",
+    "pybind11>=2.11.1",
+    "pygame>=2.6.1",
+]
