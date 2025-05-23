@@ -1,0 +1,7 @@
+[project]
+name = "3BodySimulator"
+version = "0.1.0"
+description = "The visualization simulation of three-body motion implemented using C++ & Python."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
