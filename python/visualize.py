@@ -12,7 +12,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from three_body import Body, step
 
-def simulate(n_steps=5000, dt=1e3):
+def simulate(n_steps=10000, dt=1e3):
     bodies = []
     for init in [
         {"mass": 1.0e30, "pos": [0, 0, 0],      "vel": [0, 1e4, 0]},
