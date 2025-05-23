@@ -1,7 +1,12 @@
 {
-    "name": "3BodySimulator",
+    "name": "three-body-simulator",
     "version-string": "0.1.0",
     "dependencies": [
+        {
+            "name": "python3",
+            "version>=": "3.12.9"
+        },
         "pybind11"
-    ]
+    ],
+    "builtin-baseline": "a337f5fe100f83026072765ea63a8776f984f6fd"
 }
