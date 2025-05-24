@@ -21,10 +21,12 @@ uv pip install -r requirements.txt
 # 3. 用 venv 中的 Python 配置 & 编译 C++ 扩展
 #———————————————
 echo "配置 CMake（指向 venv 中的 python）..."
-cmake -B build \
-  -DCMAKE_TOOLCHAIN_FILE=~/vcpkg/scripts/buildsystems/vcpkg.cmake \
-  -DPython3_EXECUTABLE=$(which python) \
-  -DCMAKE_BUILD_TYPE=Release
+# cmake -B build \
+#   -DCMAKE_TOOLCHAIN_FILE=~/vcpkg/scripts/buildsystems/vcpkg.cmake \
+#   -DPython3_EXECUTABLE=$(which python) \
+#   -DCMAKE_BUILD_TYPE=Release
+
+cmake --preset=vcpkg
 
 echo "开始编译 C++ 扩展..."
 cmake --build build
