@@ -11,24 +11,31 @@ rm -rf build python/three_body* .venv/ vcpkg_installed/ vcpkg/
 # 2. 创建并激活 uv 虚拟环境（Python 3.12）
 #———————————————
 echo "创建并激活 Python 3.12 虚拟环境..."
-uv venv .venv         # 默认为系统 Python3.12
-source .venv/bin/activate
-
-# 安装 Python 可视化脚本依赖
-uv pip install -r requirements.txt
+# uv venv .venv         # 默认为系统 Python3.12
+# source .venv/bin/activate
+#
+# # 安装 Python 可视化脚本依赖
+# uv pip install -r requirements.txt
+uv sync
 
 #———————————————
-# 3. 用 venv 中的 Python 配置 & 编译 C++ 扩展
+# 3. Configure and build C++ module
 #———————————————
-echo "配置 CMake（指向 venv 中的 python）..."
-cmake -B build \
-  -DCMAKE_TOOLCHAIN_FILE=~/vcpkg/scripts/buildsystems/vcpkg.cmake \
-  -DPython3_EXECUTABLE=$(which python) \
-  -DCMAKE_BUILD_TYPE=Release
-
-echo "开始编译 C++ 扩展..."
-cmake --build build
-
+#
+# the following two commands are **nearly** equivalent:
+# (
+#   not really equivalent because the first cmake command failed on my machine :( 
+# )
+# echo "配置 CMake（指向 venv 中的 python）..."
+# cmake -B build \
+#   -DCMAKE_TOOLCHAIN_FILE=~/vcpkg/scripts/buildsystems/vcpkg.cmake \
+#   -DPython3_EXECUTABLE=$(which python) \
+#   -DCMAKE_BUILD_TYPE=Release
+#
+# echo "开始编译 C++ 扩展..."
+# cmake --build build
+#
+xmake
 #———————————————
 # 4. 检查生成结果
 #———————————————
