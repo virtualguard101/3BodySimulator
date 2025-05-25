@@ -27,15 +27,18 @@ uv sync
 #   not really equivalent because the first cmake command failed on my machine :( 
 # )
 # echo "配置 CMake（指向 venv 中的 python）..."
+
 # cmake -B build \
 #   -DCMAKE_TOOLCHAIN_FILE=~/vcpkg/scripts/buildsystems/vcpkg.cmake \
 #   -DPython3_EXECUTABLE=$(which python) \
 #   -DCMAKE_BUILD_TYPE=Release
+
 #
-# echo "开始编译 C++ 扩展..."
+echo "开始编译 C++ 扩展..."
 # cmake --build build
 #
 xmake
+
 #———————————————
 # 4. 检查生成结果
 #———————————————
