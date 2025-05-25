@@ -5,16 +5,16 @@ set -e
 # 1. 清理旧构建
 #———————————————
 echo "清理旧构建文件..."
-rm -rf build python/three_body* .venv/ vcpkg_installed/ vcpkg/
+rm -rf build python/three_body* .venv/ .xmake/ build/
 
 #———————————————
 # 2. 创建并激活 uv 虚拟环境（Python 3.12）
 #———————————————
 echo "创建并激活 Python 3.12 虚拟环境..."
-# uv venv .venv         # 默认为系统 Python3.12
-# source .venv/bin/activate
-#
-# # 安装 Python 可视化脚本依赖
+uv venv .venv         # 默认为系统 Python3.12
+source .venv/bin/activate
+
+# 安装 Python 可视化脚本依赖
 # uv pip install -r requirements.txt
 uv sync
 
