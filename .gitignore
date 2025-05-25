@@ -4,3 +4,4 @@ CMakeUserPresets.json
 *.png
 .vscode/
 uv.lock
+.xmake
